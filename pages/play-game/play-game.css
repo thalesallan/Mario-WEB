@@ -1,0 +1,169 @@
+
+.game-board {
+    top: 200px;
+    background: linear-gradient(rgb(44, 218, 218), white);
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    border: 1px solid #333;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+#score {
+    top: 80px;
+    left: 620px;
+    display: none;
+    position: relative;
+}
+
+#score #score-text {
+    font-family: pixelart, sans-serif;
+    font-size: 30px;
+}
+
+.clouds {
+    z-index: -1;
+    position: absolute;
+    width: 700px;
+    bottom: 50px;
+    animation: clouds-animation 12s infinite linear;
+}
+
+.clouds .cloud-1 {
+    position: relative;
+    left: 100px;
+    width: 100px;
+    animation: clouds-animation 12s infinite linear;
+}
+
+.clouds .cloud-2 {
+    position: relative;
+    left: 80px;
+    bottom: -50px;
+    width: 200px;
+    animation: clouds-animation 8s infinite linear;
+}
+
+.clouds .cloud-3 {
+    position: relative;
+    left: 300px;
+    bottom: 250px;
+    width: 150px;
+    animation: clouds-animation 20s infinite linear;
+}
+
+.montains {
+    position: absolute;
+    bottom: 35px;
+    width: 700px;
+}
+
+.montains .montain-1 {
+    position: relative;
+    bottom: -305px;
+    width: 100px;
+    animation: montain-animation 10s infinite linear; 
+
+}
+.montains .montain-2 {
+    position: relative;
+    z-index: -1;
+    width: 300px;
+    animation: montain-animation 12s infinite linear; 
+}
+
+.ground {
+    position: absolute;
+    background-image: url('./images/mario_ground.png');
+    background-repeat: repeat-x;
+}
+
+.mario-walking {
+    position: absolute;
+    width: 100px;
+    bottom: 38px;
+    left: 0;
+}
+
+.jump {
+    animation: jump 500ms ease-out;
+}
+
+.pipe {
+    position: absolute;
+    bottom: 38px;
+    width: 80px;
+    animation: var(--o-animation-pipe-easy);
+}
+
+.ground {
+    position: absolute;
+    height: 45px;
+    width: 100%;
+    top: 679px;
+}
+
+.grounds {
+    background-image: url("/images/mario_ground.png");
+    background-repeat: repeat-x;
+}
+
+@font-face {
+    font-family: pixelart;
+    src: url("/fonts/pixelart.ttf");
+}
+
+@font-face {
+    font-family: SuperMario256;
+    src: url("/fonts/SuperMario256.ttf");
+}
+
+
+@keyframes montain-animation {
+    from {
+        right: -700px;
+    }
+    to {
+        right: 100%;
+    }
+}
+
+@keyframes clouds-animation {
+    from {
+        right: -200px;
+    }
+    to {
+        right: 100%;
+    }
+}
+
+@keyframes pipe-animation {
+    from {
+        right: -80px;
+    }
+    to {
+        right: 100%;
+    }
+}
+
+@keyframes jump {
+    0% {
+        bottom: 0;
+    }
+    40% {
+        bottom: 170px;
+    }
+    50% {
+        bottom: 170px;
+    }
+    60% {
+        bottom: 170px;
+    }
+    70% {
+        bottom: 170px;
+    }
+    0% {
+        bottom: 0;
+    }
+}

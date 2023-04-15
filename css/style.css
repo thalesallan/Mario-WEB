@@ -1,0 +1,42 @@
+
+@font-face {
+    font-family: pixelart;
+    src: url("/fonts/pixelart.ttf") format('truetype');
+}
+
+@font-face {
+    font-family: SuperMario256;
+    src: url("/fonts/SuperMario256.ttf") format('truetype');
+}
+
+:root {
+    --o-animation-pipe-initial: none;
+    --o-animation-pipe-easy: pipe-animation 2s infinite linear;
+    --o-animation-pipe-medium: pipe-animation 2.5s infinite linear;
+    --o-animation-pipe-hard: pipe-animation 1s infinite linear;
+
+    --o-pixelart-font: "pixelart";
+    --o-SuperMario256-font: "SuperMario256";
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box ;
+}
+
+body {
+    position: absolute;
+    bottom: 0%;
+    align-items: center;
+    width: 1280px;
+    height: 720px;
+}
+
+.index {
+    position: relative;
+    width: 1280px;
+    height: 720px;
+}
+
+  
